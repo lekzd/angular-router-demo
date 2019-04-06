@@ -1,0 +1,15 @@
+<div style="border: 2px solid green; padding: 10px">
+
+  <div>
+    <input type="text" [(ngModel)]="searchQuery">
+    <button (click)="goTo(searchQuery)">Go</button>
+  </div>
+
+  <ul>
+    <li><a routerLink="/repositories/angular">angular</a></li>
+    <li><a routerLink="/repositories/react">react</a></li>
+    <li><a routerLink="/repositories/vue">vue</a></li>
+  </ul>
+
+  <router-outlet></router-outlet>
+</div>

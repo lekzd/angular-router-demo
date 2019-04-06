@@ -1,0 +1,27 @@
+<div class="root">
+  <form class="form">
+
+    <div class="row">
+      <label for="login">Логин</label>
+      <input type="text" id="login" name="login" [(ngModel)]="login" required class="input">
+    </div>
+
+    <div class="row">
+      <label for="password">Пароль</label>
+      <input type="text" id="password" name="password" [(ngModel)]="password" required class="input">
+    </div>
+
+    <div class="row" *ngIf="!pending">
+      <button (click)="sendLoginForm()" class="submit">Войти</button>
+    </div>
+
+    <div class="row" *ngIf="pending">
+      отправка...
+    </div>
+
+    <div class="row error" *ngIf="error">
+      {{error}}
+    </div>
+
+  </form>
+</div>

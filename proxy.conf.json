@@ -1,0 +1,10 @@
+{
+  "/v2": {
+    "target": "https://api.npms.io",
+    "changeOrigin": true,
+    "secure": true,
+    "pathRewrite": {
+      "^/v2": ""
+    }
+  }
+}
